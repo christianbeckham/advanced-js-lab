@@ -135,11 +135,20 @@ console.log("mexicanFood from filterExample", mexicanFood);
 //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
 //Filter
 
-function problemOne() {
-	let results;
+function problemOne(dishesArray) {
+	let results = dishesArray.filter((el) => {
+		if (el["cuisine"].toLowerCase() === "vegetarian") {
+			return true;
+		} else {
+			return false;
+		}
+	});
 
 	return results;
 }
+
+let vegetarianDishes = problemOne(dishes);
+console.log("Problem One:", vegetarianDishes);
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
