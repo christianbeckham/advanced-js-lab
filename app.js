@@ -296,6 +296,15 @@ console.log("Problem Ten:", problemTenResults);
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
+function problemEightBonus(dishesArray) {
+	let results = dishesArray
+		.map((el) => el.cuisine)
+		.filter((el, index, arr) => arr.indexOf(el) === index);
+	return results;
+}
+
+let problemEightBonusResult = problemEightBonus(dishes);
+console.log("Problem 8b:", problemEightBonusResult);
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
