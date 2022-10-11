@@ -283,6 +283,16 @@ console.log("Problem Nine:", problemNineResults);
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
+function problemTen(dishesArray) {
+	let results = dishesArray
+		.filter((el) => el.cuisine.toLowerCase() === "vegetarian")
+		.map((el) => `${el.cuisine} ${el.name}`);
+	return results;
+}
+
+let problemTenResults = problemTen(dishes);
+console.log("Problem Ten:", problemTenResults);
+
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
