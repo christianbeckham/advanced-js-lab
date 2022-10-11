@@ -172,6 +172,21 @@ console.log("Problem Two:", problemTwoResults);
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
 
+function problemThree(dishesArray) {
+	let results = dishesArray.filter((el) => {
+		if (el["cuisine"] === "Italian" && el["servings"] > 5) {
+			return true;
+		} else {
+			return false;
+		}
+	});
+
+	return results;
+}
+
+let problemThreeResults = problemThree(dishes);
+console.log("Problem Three:", problemThreeResults);
+
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
