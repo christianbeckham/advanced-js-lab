@@ -251,6 +251,15 @@ console.log("Problem Six:", problemSixResults);
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
 
+function problemSeven(dishesArray) {
+	let userInput = prompt("Enter an ingredient:");
+	let results = dishesArray.filter((el) => el.ingredients.includes(userInput));
+	return results;
+}
+
+let problemSevenResults = problemSeven(dishes);
+console.log("Problem Seven:", problemSevenResults);
+
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
