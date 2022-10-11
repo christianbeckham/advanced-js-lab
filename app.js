@@ -333,3 +333,17 @@ let problemTwelveResults = problemTwelve(dishes);
 console.log("Problem 12:", problemTwelveResults);
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+
+function problem13(dishesArray) {
+	let map = dishesArray.reduce((map, el) => {
+		map[el.cuisine] = map[el.cuisine] ? [...map[el.cuisine], el] : [el];
+		return map;
+	}, {});
+	let results = Object.entries(map)
+		.filter((el) => el[1].length === 1)
+		.map((el) => el[1][0]);
+	return results;
+}
+
+let problemThirteenResults = problem13(dishes);
+console.log("Problem 13:", problemThirteenResults);
