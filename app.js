@@ -324,4 +324,12 @@ console.log("Problem Eleven:", problemElevenResults);
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
 
+function problemTwelve(dishesArray) {
+	let results = dishesArray.reduce((acc, item) => acc + item.servings, 0);
+	return results;
+}
+
+let problemTwelveResults = problemTwelve(dishes);
+console.log("Problem 12:", problemTwelveResults);
+
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
