@@ -263,6 +263,14 @@ console.log("Problem Seven:", problemSevenResults);
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
+function problemEight(dishesArray) {
+	let results = dishesArray.map((el) => el.cuisine);
+	return results;
+}
+
+let problemEightResults = problemEight(dishes);
+console.log("Problem Eight:", problemEightResults);
+
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map
 
