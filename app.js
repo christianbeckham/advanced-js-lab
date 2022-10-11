@@ -228,6 +228,26 @@ console.log("Problem Five:", problemFiveResults);
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
+function problemSix(dishesArray) {
+	let results = dishesArray.filter((el) => {
+		if (el.ingredients.includes("chickpea")) {
+			return true;
+		} else {
+			return false;
+		}
+	});
+
+	return results;
+}
+
+// function problemSix(dishesArray) {
+// 	let results = dishesArray.filter((el) => el.ingredients.includes("chickpea"));
+// 	return results;
+// }
+
+let problemSixResults = problemSix(dishes);
+console.log("Problem Six:", problemSixResults);
+
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
 
