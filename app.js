@@ -190,6 +190,21 @@ console.log("Problem Three:", problemThreeResults);
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function problemFour(dishesArray) {
+	let results = dishesArray.filter((el) => {
+		if (el.id === el.servings) {
+			return true;
+		} else {
+			return false;
+		}
+	});
+
+	return results;
+}
+
+let problemFourResults = problemFour(dishes);
+console.log("Problem Four:", problemFourResults);
+
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
 
